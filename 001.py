@@ -1,24 +1,27 @@
-# class Solution(object):
-#     def twoSum(self, nums, target):
-#         """
-#         :type nums: List[int]
-#         :type target: int
-#         :rtype: List[int]
-#         """
-
-#         for index, num in enumerate(nums):
-#             ## copy the list and remove the current element
-#             nums_copy = nums[:]
-#             nums_copy.remove(num)
-
-#             for index2, num2 in enumerate(nums):
-#                 ## skip the same element
-#                 if index == index2:
-#                     continue
-#                 if num + num2 == target:
-#                     return [index, index2]
-
 # https://leetcode.com/problems/two-sum/description/
+# This solution has only O(n2) time complexity.
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        for index, num in enumerate(nums):
+            ## copy the list and remove the current element
+            nums_copy = nums[:]
+            nums_copy.remove(num)
+
+            for index2, num2 in enumerate(nums):
+                ## skip the same element
+                if index == index2:
+                    continue
+                if num + num2 == target:
+                    return [index, index2]
+
+
+# This solution has only O(n) time complexity.
 class Solution(object):
     def twoSum(self, nums, target):
         """
