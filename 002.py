@@ -1,14 +1,12 @@
+## https://leetcode.com/problems/add-two-numbers/
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
 # l1
 # ListNode{val: 2, next: ListNode{val: 4, next: ListNode{val: 3, next: None}}}
 ## check the definition of ListNode before starting
-
-## https://leetcode.com/problems/add-two-numbers/
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -46,4 +44,3 @@ class Solution(object):
             return ListNode(val=val, next=createNextNode(getNextNode(nod1), getNextNode(nod2), carried=newCarried))
 
         return createNextNode(l1, l2)
-
