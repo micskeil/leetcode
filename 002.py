@@ -6,11 +6,9 @@
 
 # l1
 # ListNode{val: 2, next: ListNode{val: 4, next: ListNode{val: 3, next: None}}}
-
-
 ## check the definition of ListNode before starting
 
-
+## https://leetcode.com/problems/add-two-numbers/
 class Solution(object):
     def addTwoNumbers(self, l1, l2):
         """
@@ -30,8 +28,7 @@ class Solution(object):
             if nod1 is None and nod2 is None:
                 if carried == 0:
                     return
-                else:
-                  return ListNode(val=carried, next=None)
+                return ListNode(val=carried, next=None)
 
             val = 0
             if nod1 !=None and nod1.val != None:
@@ -49,13 +46,4 @@ class Solution(object):
             return ListNode(val=val, next=createNextNode(getNextNode(nod1), getNextNode(nod2), carried=newCarried))
 
         return createNextNode(l1, l2)
-
-## test case 1
-l1 = [2,4,3]
-l2 = [5,6,4]
-# output = [7,0,8]
-
-s = Solution()
-
-print(s.addTwoNumbers(l1, l2))
 

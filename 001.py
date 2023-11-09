@@ -18,6 +18,7 @@
 #                 if num + num2 == target:
 #                     return [index, index2]
 
+# https://leetcode.com/problems/two-sum/description/
 class Solution(object):
     def twoSum(self, nums, target):
         """
